@@ -9,56 +9,46 @@ redirect_from:
 
 {% include base_path %}
 
-Education
+Educación
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ingeniero de Sistemas - Universidad de Investigación y Desarrollo 
+* Especialista en Seguridad Informatica - Universidad de Investigación y Desarrollo 
 
-Work experience
+Experiencia de Trabajo
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Junior Web Developer - ITS COLOMBIA – BOGOTA
+  * Mantenimiento de una aplicación Frontend con el Framework Angular 14, desarrollado con el lenguaje TypeScript.
+  * Uso de maquinas virtuales para servidores de producción y desarrollo. Con tecnologías MySql Server y IIS en Windows Server 2022.
+  * Backend en C# .NET 6 desarrollo de Api Rest con Linq, entity framework.
+  * OpenAPI para la documentación de los endpoins de las API’s.
+  * Base de Datos relacional.
+  * Desarrollo de proyectos con metodologías ágiles.
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Diseñador de páginas web - Bucaramanga
+  * Diseñador de backend en tecnologías Spring Framework
+  * Seguridad con Spring Security
+  * Base de datos Mysql
 
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Analista de Requisitos - World Digital Solutions · Bucaramanga
+  * Gestionar equipos de desarrollo
+  * Creación de tablero y asignación de tickets
+  * Reunión con cliente, levantamiento de requisitos
+  * Socialización de requisitos con el equipo y definición de cronograma de desarrollo
+  * Entrega de versiones para certificar por el equipo de QA
+  * Entrega de versión al cliente.
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Pentesting Web
+* Análisis de vulnerabilidades
+* RECON
+* Análisis HTTP y tráfico de red
+  * Redes
+* Detección de phishing
+* Programación Orientada a Objetos
+* OpenAPI
+* Angular
+* Base de datos SQL
+* Github
+* C#, Java, JS, TypeScript
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
