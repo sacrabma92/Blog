@@ -58,7 +58,7 @@ Inyectamos en cada una de ellas mirando cual podemos inyectar 'String'
 
 Es una BD Postgres SQL
 
-![DB version]({{site.url}}/images/SQLi/sqli-7/DB version.png)
+![DB version]({{site.url}}/images/SQLi/sqli-9/DB version.png)
 
 ```javascript
 ' UNION SELECT version(), NULL --
