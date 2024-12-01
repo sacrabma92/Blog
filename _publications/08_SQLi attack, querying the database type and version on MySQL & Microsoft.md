@@ -61,7 +61,7 @@ Ingresamos una lista de payloads y ejecutamos con Burpsuite
 @@variable	global variable
 ```
 
-![Intruder]({{site.url}}/images/SQLi/sqli-8/intruder.png)
+![Intruder]({{site.url}}/images/SQLi/sqli-8/Intruder.png)
 
 ![Intruder]({{site.url}}/images/SQLi/sqli-8/resultado.png)
 
