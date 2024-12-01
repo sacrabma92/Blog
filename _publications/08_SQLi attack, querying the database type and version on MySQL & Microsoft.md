@@ -11,11 +11,11 @@ date: 2024-12-01
 citation: 'SQLi attack, querying the database type and version on MySQL & Microsoft'
 ---
 
-![logo]({{site.url}}/images/SQLi/sqli-7/logo.png)
+![logo]({{site.url}}/images/SQLi/sqli-8/logo.png)
 
 ## Descripción del laboratorio
 
-![Descripción]({{site.url}}/images/SQLi/sqli-7/descripcion.png)
+![Descripción]({{site.url}}/images/SQLi/sqli-8/descripcion.png)
 
 ## Objetivo del laboratorio
 
