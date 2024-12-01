@@ -12,7 +12,7 @@ title                    : "Carlos Ramirez"
 title_separator          : "-"
 name                     : &name "Carlos Andres Ramirez"
 description              : &description "Hacking | Bug Bounty"
-url                      : https://sacrabma92.github.io/Blog # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+url                      : https://sacrabma92.github.io/Blog/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "https://github.com/sacrabma92/Blog"
 
