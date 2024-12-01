@@ -76,10 +76,10 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
+  htb:
+    title: 'HTB'
+  portswigger:
+    title: 'Port Swigger'    
   conferences:
     title: 'Conference Papers'
 
