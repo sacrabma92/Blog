@@ -12,3 +12,11 @@ citation: 'SQL injection UNION attack, finding a column containing text'
 ---
 
 ![logo]({{site.url}}/images/SQLi/sqli-4/logo.png)
+
+## Descripción del laboratorio
+
+![Descripción]({{site.url}}/images/SQLi/sqli-4/descripcion.png)
+
+## Objetivo del laboratorio
+
+Realizar un ataque de inyección SQL UNION que devuelva una fila adicional que contenga el valor proporcionado. Esta técnica le ayudará a determinar qué columnas son compatibles con datos de cadena.
