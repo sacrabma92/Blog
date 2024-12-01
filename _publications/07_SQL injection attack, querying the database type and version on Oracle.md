@@ -54,7 +54,7 @@ Inyectamos en cada una de ellas mirando cual podemos inyectar 'String', en esta 
 
 ## Miramos la versión de la BD
 
-![Hoja de Trucos](https://portswigger.net/web-security/sql-injection/cheat-sheet)
+[Hoja de Trucos](https://portswigger.net/web-security/sql-injection/cheat-sheet)
 
 Ya que sabemos que es una BD de Oracle probamos averiguar la versión de Oracle
 
