@@ -63,11 +63,11 @@ Ingresamos una lista de payloads y ejecutamos con Burpsuite
 
 ![Intruder]({{site.url}}/images/SQLi/sqli-8/Intruder.png)
 
-![Intruder]({{site.url}}/images/SQLi/sqli-8/resultado.png)
+![Intruder]({{site.url}}/images/SQLi/sqli-8/resultado2.png)
 
 Y probamos uno de los resultados
 
-![Intruder]({{site.url}}/images/SQLi/sqli-8/resultado2.png)
+![Intruder]({{site.url}}/images/SQLi/sqli-8/resultado.png)
 
 ## Determinar el numero de columnas retornadas por la consulta
 
