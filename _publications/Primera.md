@@ -3,7 +3,7 @@ title: "Primera Publicación"
 collection: publications
 category: htb
 permalink: /publications/Primera
-excerpt: 'Primera publicacion para practicar'
+excerpt: 'The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide'
 date: 2024-11-01
 #venue: 'Journal 1'
 #slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
