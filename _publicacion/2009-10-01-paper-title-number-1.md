@@ -1,8 +1,8 @@
 ---
 title: "Primera Publicación"
-collection: publications
+collection: publicacion
 category: HTB
-permalink: /publications/2009-10-01-paper-title-number-1
+permalink: /publicacion/2009-10-01-paper-title-number-1
 excerpt: 'Primera publicacion para practicar'
 date: 2024-11-01
 venue: 'AAA'
