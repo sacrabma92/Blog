@@ -103,6 +103,10 @@ Ya que sabemos que es una BD MySQL
 
 ![DB version]({{site.url}}/images/SQLi/sqli-8/version.png)
 
+## Aprobado 
+
+![Aprobado]({{site.url}}/images/SQLi/sqli-8/Aprobado.png)
+
 # Codigo Python
 
 ```python
