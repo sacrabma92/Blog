@@ -58,8 +58,6 @@ Inyectamos en cada una de ellas mirando cual podemos inyectar 'String', ya que e
 
 Ya que sabemos que es una BD de Oracle probamos averiguar la versión de Oracle
 
-![DB version]({{site.url}}/images/SQLi/sqli-10/DB version.png)
-
 ```javascript
 ' UNION SELECT banner, NULL FROM v$version--
 ```
