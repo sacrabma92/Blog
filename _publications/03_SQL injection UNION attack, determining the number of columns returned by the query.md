@@ -13,8 +13,6 @@ citation: 'SQLi UNION attack determining the number of columns returned by the q
 
 ![logo]({{site.url}}/images/SQLi/sqli-3/logo.png)
 
-Este escrito para el laboratorio *SQL injection UNION attack, determining the number of columns returned by the query* pertenece a PortSwigger [PortSwigger's Web Security Academy](https://portswigger.net/web-security).
-
 Lab-Link: <https://portswigger.net/web-security/sql-injection/union-attacks/lab-determine-number-of-columns>  
 Dificultad: PRACTITIONER  
 
