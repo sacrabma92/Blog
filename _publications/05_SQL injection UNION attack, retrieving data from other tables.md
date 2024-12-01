@@ -8,7 +8,7 @@ date: 2024-12-01
 #venue: 'Journal 1'
 #slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 #paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-citation: 'SQL injection UNION attack, finding a column containing text'
+citation: 'SQL injection UNION attack, retrieving data from other tables'
 ---
 
 ![logo]({{site.url}}/images/SQLi/sqli-5/logo.png)
