@@ -195,11 +195,11 @@ El payload es tipo entero, ya que vamos a averiguar cuantos caracteres tiene el 
 ```sql
 ' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator' and LENGTH(password)>PAYLOAD) || ' 
 ```
-![Intruder3]({{site.url}}/images/SQLi/sqli-11/Intruder3.png)
+![Intruder3]({{site.url}}/images/SQLi/sqli-12/Intruder3.png)
 
 El resultado correcto nos debe arrojar `ERROR` en este caso es `20` ya que es mayor a 19. La longitud del password es de `20`.
 
-![Resultado]({{site.url}}/images/SQLi/sqli-11/Resultado.png)
+![Resultado]({{site.url}}/images/SQLi/sqli-12/Resultado.png)
 
 ## Ataque de Fuerza al campo Password
 
@@ -211,21 +211,21 @@ Utiliza una consulta que verifique si un carácter en una posición específica 
 
 Procedemos a realizar un `Intruder` en dos posiciones
 
-![Intruder]({{site.url}}/images/SQLi/sqli-11/Intruder4.png)
+![Intruder]({{site.url}}/images/SQLi/sqli-12/Intruder4.png)
 
 Filtramos por estado error `500` esas son las letras que corresponden al password de `administrator`
 
-![Password]({{site.url}}/images/SQLi/sqli-11/password.png)
+![Password]({{site.url}}/images/SQLi/sqli-12/password.png)
 
 ## Login
 
 Probamos el passwor de la BD
 
-![Login]({{site.url}}/images/SQLi/sqli-11/login.png)
+![Login]({{site.url}}/images/SQLi/sqli-12/login.png)
 
 ## Aprobado ⭕
 
-![Aprobado]({{site.url}}/images/SQLi/sqli-11/aprobado.png)
+![Aprobado]({{site.url}}/images/SQLi/sqli-12/aprobado.png)
 
 # Codigo Python 
 
