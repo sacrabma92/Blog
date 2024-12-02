@@ -97,7 +97,7 @@ En este caso muestra el mensaje `Welcome back!` con la consulta de la version de
 Ya que `no` conocemos las tablas que tiene la BD, haremos un ataque para comprobar que tablas existen. Si existe la tabla tendra que mostrar el mensaje `Welcom back!` de lo contrario no mostrara nada. 
 
 ```sql
-' and (SELECT 'x' FROM <TABLA> LIMIT 1)='x'--
+' and (SELECT 'x' FROM PAYLOAD LIMIT 1)='x'--
 ```
 
 Vamos a usar la herramienta intruder para hacer el ataque.
@@ -215,8 +215,35 @@ itadmin
 
  Realizamos el ataque de intruder
 
-![Intruder 2]({{site.url}}/images/SQLi/sqli-11/Intruder 2.png)
+![Intruder 2]({{site.url}}/images/SQLi/sqli-11/Intruder2.png)
 
 Filtramos los usuarios que tienen el mensaje de `Welcome back!` y esos son los que existen en la tabla.
 
 ![Filtado 2]({{site.url}}/images/SQLi/sqli-11/filtrado2.png)
+
+## Enumerar la contraseña del usuario
+
+Al ingresar un usuario y contraseña invalido nos arroja el siguiente error
+
+![Login 2]({{site.url}}/images/SQLi/sqli-11/incorrecto.png)
+
+El payload es tipo entero, ya que vamos a averiguar cuantos caracteres tiene el password de un usuario.
+
+```sql
+' AND (SELECT LENGTH(password) FROM users WHERE username = 'administrator') = PAYLOAD--
+```
+![Longitud]({{site.url}}/images/SQLi/sqli-11/longitud password.png)
+
+Filtramos por el mensaje `Welcome back!`
+
+![Longitud 2]({{site.url}}/images/SQLi/sqli-11/longitud password filtro.png)
+
+Longitud de caracteres que tiene el password
+
+![Longitud 2]({{site.url}}/images/SQLi/sqli-11/longitud.png)
+
+## Ataque de Fuerza al campo Password
+
+```sql
+' AND SUBSTRING((SELECT password FROM users WHERE username = 'administrator'), 1, 1) = 'a'--
+```
