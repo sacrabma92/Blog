@@ -201,7 +201,7 @@ El resultado correcto nos debe arrojar `ERROR` en este caso es `20` ya que es ma
 
 ![Resultado]({{site.url}}/images/SQLi/sqli-12/Resultado.png)
 
-## Ataque de Fuerza al campo Password
+## Ataque de Fuerza Bruta al campo Password
 
 Utiliza una consulta que verifique si un carácter en una posición específica coincide con una letra. Si arroja error la consulta la letra pertenece al password.
 
