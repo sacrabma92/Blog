@@ -221,11 +221,7 @@ Filtramos los usuarios que tienen el mensaje de `Welcome back!` y esos son los q
 
 ![Filtado 2]({{site.url}}/images/SQLi/sqli-11/filtrado2.png)
 
-## Enumerar la contraseña del usuario
-
-Al ingresar un usuario y contraseña invalido nos arroja el siguiente error
-
-![Login 2]({{site.url}}/images/SQLi/sqli-11/incorrecto.png)
+## Averiguar longitud de password de un usuario
 
 El payload es tipo entero, ya que vamos a averiguar cuantos caracteres tiene el password de un usuario.
 
