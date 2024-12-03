@@ -2,7 +2,7 @@
 title: "15 Blind SQL injection with out-of-band interaction"
 collection: publications
 category: portswigger
-permalink: /publications/15_Blind SQL injection with out-of-band interaction
+permalink: /publications/SQLi/15_Blind SQL injection with out-of-band interaction
 excerpt: 'Este laboratorio contiene una vulnerabilidad de inyección SQL ciega. Para resolver el laboratorio, explotamos la vulnerabilidad de inyección SQL para provocar una búsqueda DNS a Burp Collaborator.'
 date: 2024-12-02
 #venue: 'Journal 1'
