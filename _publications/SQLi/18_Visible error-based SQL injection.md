@@ -2,7 +2,7 @@
 title: "18 Visible error-based SQL injection"
 collection: publications
 category: portswigger
-permalink: /publications/SQLi/18_Visible error-based SQL injection
+permalink: publications/SQLi/18_Visible error-based SQL injection
 excerpt: 'Este laboratorio contiene una vulnerabilidad de inyección SQL. La aplicación utiliza una cookie de seguimiento para análisis y realiza una consulta SQL que contiene el valor de la cookie enviada. No se devuelven los resultados de la consulta SQL.'
 date: 2024-12-02
 #venue: 'Journal 1'

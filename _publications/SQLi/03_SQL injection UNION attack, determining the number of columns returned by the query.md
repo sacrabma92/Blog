@@ -2,7 +2,7 @@
 title: "03 SQLi UNION attack determining the number of columns returned by the query"
 collection: publications
 category: portswigger
-permalink: /publications/SQLi/03_SQL injection UNION attack, determining the number of columns returned by the query
+permalink: publications/SQLi/03_SQL injection UNION attack, determining the number of columns returned by the query
 excerpt: 'Este laboratorio contiene una vulnerabilidad de inyección SQL en el campo de categoría del filtro de productos. Esta vulnerabilidad puede explotarse mediante un ataque UNION para recuperar datos de otras tablas. Para resolver el laboratorio, realizamos un ataque de inyección SQL que determina el número de columnas que devuelve la consulta. Este es el primer paso de un ataque UNION de inyección SQL. Utilizaremos esta técnica en laboratorios posteriores para construir el ataque completo.'
 date: 2024-12-01
 #venue: 'Journal 1'

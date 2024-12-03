@@ -2,7 +2,7 @@
 title: "13 Blind SQL injection with time delays"
 collection: publications
 category: portswigger
-permalink: /publications/SQLi/13_Blind SQL injection with time delays
+permalink: publications/SQLi/13_Blind SQL injection with time delays
 excerpt: 'Este laboratorio contiene una vulnerabilidad de inyección SQL ciega. Para resolver el laboratorio, explotamos la vulnerabilidad de inyección SQL basada en el tiempo para provocar un retraso de 10 segundos.'
 date: 2024-12-02
 #venue: 'Journal 1'
