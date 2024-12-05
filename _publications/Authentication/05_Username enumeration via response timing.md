@@ -19,7 +19,7 @@ citation: 'Username enumeration via response timing'
 
 ## Objetivo del laboratorio
 
-Este laboratorio es vulnerable a la enumeración de nombres de usuario utilizando sus tiempos de respuesta. Para resolverlo, enumeramos un nombre de usuario válido, forzamos su contraseña y accedemos a la página de su cuenta.
+Para resolverlo, enumeramos un nombre de usuario válido, forzamos su contraseña y accedemos a la página de su cuenta.
 
 ## Recursos Necesarios
 
