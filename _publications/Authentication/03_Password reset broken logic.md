@@ -4,7 +4,7 @@ collection: publications
 category: portswigger
 permalink: publications/Authentication/03_Password reset broken logic
 excerpt: 'La funcionalidad de restablecimiento de contraseña de este laboratorio es vulnerable. Para resolver el laboratorio, restablecemos la contraseña de Carlos y luego iniciamos sesión y accedemos a su página «My account».'
-date: 2034-12-04
+date: 2024-12-04
 #venue: 'Journal 1'
 #slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 #paperurl: 'http://academicpages.github.io/files/paper1.pdf'

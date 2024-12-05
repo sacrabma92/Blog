@@ -4,7 +4,7 @@ collection: publications
 category: portswigger
 permalink: publications/Authentication/04_Username enumeration via subtly different responses
 excerpt: 'Este laboratorio es sutilmente vulnerable a ataques de enumeración de nombres de usuario y de fuerza bruta de contraseñas. Tiene una cuenta con un nombre de usuario y una contraseña predecibles.'
-date: 2034-12-04
+date: 2024-12-04
 #venue: 'Journal 1'
 #slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 #paperurl: 'http://academicpages.github.io/files/paper1.pdf'
