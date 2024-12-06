@@ -60,6 +60,8 @@ Vamos a reestablecer un password insertando el servidor al cual llegara la petic
 
 Añadimos lo siguiente a la cabecera y le colocamos el servidor al cual llegara la solicitud.
 
+```El encabezado X-Forwarded-Host es una parte de las cabeceras HTTP utilizadas en entornos con proxies o balanceadores de carga para comunicar la información original del host solicitado por el cliente al servidor de backend.```
+
 ```javascript
 X-Forwarded-Host:
 ```
