@@ -60,6 +60,8 @@ Filtramos por `Status code`
 
 Copiamos el link que nos proporciona y lo pegamos en el navegador
 
+![Estatus2]({{site.url}}/images/Authentication/authentication-lab-08/estatus2.png)
+
 # Aprobado
 
 ![Aprobado]({{site.url}}/images/Authentication/authentication-lab-08/aprobado.png)
