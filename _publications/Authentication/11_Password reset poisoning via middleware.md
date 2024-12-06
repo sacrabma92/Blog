@@ -2,7 +2,7 @@
 title: "11 Password reset poisoning via middleware"
 collection: publications
 category: portswigger
-permalink: publications/Authentication/10_Offline password cracking
+permalink: publications/Authentication/11_Password reset poisoning via middleware
 excerpt: 'Este laboratorio es vulnerable al envenenamiento por restablecimiento de contraseña. El usuario carlos hará clic por descuido en cualquier enlace de los correos electrónicos que reciba. Para resolver el laboratorio, iniciamos sesión en la cuenta de Carlos.'
 date: 2024-12-06
 #venue: 'Journal 1'
