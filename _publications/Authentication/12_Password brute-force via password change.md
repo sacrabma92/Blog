@@ -57,6 +57,8 @@ Filtramos por `Length` y vemos un valor diferente
 
 ![Aprobado]({{site.url}}/images/Authentication/authentication-lab-12/aprobado.png)
 
+# Codigo Python
+
 ```python
 import requests
 import sys
