@@ -4,7 +4,7 @@ collection: publications
 category: portswigger
 permalink: publications/Command Injection/01_OS command injection, simple case
 excerpt: 'Este laboratorio contiene una vulnerabilidad de inyección de comandos del sistema operativo en el comprobador de existencias de productos. La aplicación ejecuta un comando shell que contiene los ID de producto y tienda proporcionados por el usuario, y devuelve la salida sin procesar del comando en su respuesta.'
-date: 2024-12-07
+date: 2024-12-08
 #venue: 'Journal 1'
 #slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 #paperurl: 'http://academicpages.github.io/files/paper1.pdf'
