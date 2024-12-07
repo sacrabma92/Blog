@@ -2,7 +2,7 @@
 title: "05 Username enumeration via response timing"
 collection: publications
 category: portswigger
-permalink: publications/Authentication/04_Username enumeration via subtly different responses
+permalink: publications/Authentication/05_Username enumeration via response timing
 excerpt: 'Este laboratorio es sutilmente vulnerable a ataques de enumeración de nombres de usuario y de fuerza bruta de contraseñas. Tiene una cuenta con un nombre de usuario y una contraseña predecibles.'
 date: 2024-12-04
 #venue: 'Journal 1'
