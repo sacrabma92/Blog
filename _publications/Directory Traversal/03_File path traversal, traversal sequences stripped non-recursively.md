@@ -11,11 +11,11 @@ date: 2024-12-07
 citation: 'File path traversal, traversal sequences stripped non-recursively'
 ---
 
-![logo]({{site.url}}/images/Directory Traversal/directory-traversal-02/logo.png)
+![logo]({{site.url}}/images/Directory Traversal/directory-traversal-03/logo.png)
 
 ## Descripción del laboratorio
 
-![Descripción]({{site.url}}/images/Directory Traversal/directory-traversal-02/descripcion.png)
+![Descripción]({{site.url}}/images/Directory Traversal/directory-traversal-03/descripcion.png)
 
 ## Objetivo del laboratorio
 

@@ -30,15 +30,15 @@ En el endpoint `/image?filename=75.jpg `, tambien indica que las rutas se maneja
 
 Probamos regresandonos una carpetas e ingresar desde alli `../../../etc/passwd` y vemos que nos arroja error.
 
-![Conf2]({{site.url}}/images/Directory Traversal/directory-traversal-01/conf2.png)
+![Conf2]({{site.url}}/images/Directory Traversal/directory-traversal-02/conf2.png)
 
 Ahora probamos quitando el `../` y vemos que si nos deja ingresar. Esto sucede porque esta usando la ruta relativa `/etc/passwd`.
 
-![Conf3]({{site.url}}/images/Directory Traversal/directory-traversal-01/conf3.png)
+![Conf3]({{site.url}}/images/Directory Traversal/directory-traversal-02/conf3.png)
 
 ## Aprobado
 
-![Aprobado]({{site.url}}/images/Directory Traversal/directory-traversal-01/aprobado.png)
+![Aprobado]({{site.url}}/images/Directory Traversal/directory-traversal-02/aprobado.png)
 
 # Codigo Python
 
