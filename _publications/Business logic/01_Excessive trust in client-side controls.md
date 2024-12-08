@@ -4,7 +4,7 @@ collection: publications
 category: portswigger
 permalink: publications/Business logic/01_Excessive trust in client-side controls
 excerpt: 'Este laboratorio no valida adecuadamente la entrada del usuario. Puedes aprovechar un fallo lógico en su flujo de trabajo de compras para comprar artículos por un precio no previsto.'
-date: 2024-12-08
+date: 2024-12-09
 #venue: 'Journal 1'
 #slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 #paperurl: 'http://academicpages.github.io/files/paper1.pdf'
